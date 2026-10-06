@@ -113,7 +113,7 @@ Full 3-state results will be added when the sweep finishes. Everything below com
 |---|---|
 | No errors | Grim Trigger dominates, as in Wolfram's static ranking |
 | 1% errors, no mutation | Grim Trigger dominates |
-| 1% errors + mutation | Population never settles: a lasting cycle TFT → AllC → AllD → Grim → TFT, with TFT the most common overall. Wolfram's static top 10 hold only 25–38% of the population. Holds at all three selection strengths |
+| 1% errors + mutation | Population never settles: a lasting cycle TFT → AllC → AllD → TFT, with TFT the most common overall. Wolfram's static top 10 hold only 25–38% of the population. Holds at all three selection strengths |
 | 5% errors + mutation | Always Defect takes over at weaker selection, Grim Trigger at stronger |
 
 So with 2-state machines, Wolfram's static winners often do survive selection. The cycle depends on errors and mutation being present together.
