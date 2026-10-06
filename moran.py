@@ -59,6 +59,8 @@ def main():
     ap.add_argument("--out", default="results")
     a = ap.parse_args()
 
+    os.makedirs(a.out, exist_ok=True)
+
     machines, raw, cls, first = build(a.states, a.ensemble)
     ev.raw_index = {m: i for i, m in enumerate(raw)}
     n = len(machines)
