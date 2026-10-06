@@ -101,11 +101,28 @@ These are operational stand-ins for Axelrod's principles, not his exact definiti
 
 **Assumed:** in the `wolfram` ensemble, every machine opens with Cooperate. Wolfram's strategy count implies that the opening move isn't set by the start state, and he describes both Grim Trigger and Tit for Tat as opening with Cooperate. The `full` ensemble drops this assumption and lets each machine's start state set its opening move. Results are reported for both.
 
-## Results
+## Results (in progress)
 
-*[Fill in once the 3-state sweep is complete: headline findings, key figures, and the robustness table.]*
+Full 3-state results will be added when the sweep finishes. Everything below comes from completed runs and can be reproduced with the commands above.
 
-A short write-up is available at *[link]*.
+**2 states, replicator dynamics** (`wolfram` ensemble, 18 conditions)
+
+| Conditions | Outcome |
+|---|---|
+| No errors | Grim Trigger dominates, as in Wolfram's static ranking |
+| 1% errors, no mutation | Grim Trigger dominates |
+| 1% errors + mutation | Population never settles: a lasting cycle TFT → AllC → AllD → Grim → TFT, with TFT the most common overall. Wolfram's static top 10 hold only 25–38% of the population. Holds at all three selection strengths |
+| 5% errors + mutation | Always Defect takes over at weaker selection, Grim Trigger at stronger |
+
+So with 2-state machines, Wolfram's static winners often do survive selection. The cycle depends on errors and mutation being present together.
+
+**3 states, no errors** (`wolfram` ensemble, 6 of 36 conditions so far)
+
+In all six runs, Wolfram's static top 10 fall to essentially zero (at most 0.01% of the population). Every survivor is nice (never defects first). Without mutation, the most common survivor ranked 20th in the static tournament. With mutation, Always Cooperate is the most common, but once everyone cooperates the nice strategies earn the same payoffs, so which one is most common is mostly random drift, not selection.
+
+**Finite populations (Moran process)**
+
+Being re-run after a bug fix to the noisy payoff calculation. Results to follow.
 
 ## Citation
 
