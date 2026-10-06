@@ -124,7 +124,7 @@ In all six runs, Wolfram's static top 10 fall to essentially zero (at most 0.01%
 
 **Finite populations (Moran process)**
 
-Being re-run after a bug fix to the noisy payoff calculation. Results to follow.
+2 states, 1% errors, population of 200, 3 random seeds: Always Defect takes over in every run (68–81% of the population, 75% on average), with Tit for Tat at about 8%. The cycle seen in the infinite-population model disappears. Here the static tournament does predict the outcome: Always Defect ranks first in the static tournament with 1% errors, and the static top 10 end up with 85% of the population.
 
 ## Citation
 
